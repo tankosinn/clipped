@@ -1,0 +1,16 @@
+repos:
+  - repo: local
+    hooks:
+      - id: clipped
+        name: clipped
+        entry: cargo
+        language: system
+        args: ["r", "--bin", "clipped"]
+        pass_filenames: true
+        require_serial: true
+      - id: fmt
+        name: format
+        entry: cargo
+        language: system
+        args: ["fmt"]
+        pass_filenames: false

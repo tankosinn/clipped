@@ -1,0 +1,1 @@
+clippy_args = ["--", "-D", "clippy::needless_return"]

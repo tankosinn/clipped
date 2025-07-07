@@ -1,0 +1,56 @@
+[package]
+name = "clipped"
+version = "0.0.0"
+authors = ["Tankosin <tankosinn@gmail.com>"]
+description = "Clipped your cargo clippy"
+license = "MIT"
+repository = "https://github.com/tankosinn/clipped"
+readme = "README.md"
+keywords = ["lint", "cli", "git-hooks", "clippy", "precommit"]
+categories = ["command-line-utilities", "development-tools"]
+edition = "2024"
+
+# <https://doc.rust-lang.org/rustc/lints/listing/allowed-by-default.html>
+[lints.rust]
+absolute_paths_not_starting_with_crate = "warn"
+non_ascii_idents = "warn"
+redundant_imports = "warn"
+trivial_casts = "warn"
+trivial_numeric_casts = "warn"
+unreachable_pub = "warn"
+unsafe_code = "deny"
+unsafe_op_in_unsafe_fn = "warn"
+unit_bindings = "warn"
+unused_qualifications = "warn"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+dbg_macro = "warn"
+todo = "warn"
+unimplemented = "warn"
+allow_attributes = "warn"
+self_named_module_files = "warn"
+infinite_loop = "warn"
+pedantic = { level = "warn", priority = -1 }
+must_use_candidate = "allow"
+return_self_not_must_use = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+cargo = { level = "warn", priority = -1 }
+multiple_crate_versions = "allow"
+
+[dependencies]
+cargo_metadata = "0.20.0"
+clap = { version = "4.5.40", features = ["derive"] }
+dunce = "1.0.5"
+env_logger = "0.11.8"
+figment = { version = "0.10.19", features = ["toml", "env"] }
+log = "0.4.27"
+rayon = "1.10.0"
+rustc-hash = "2.1.1"
+serde = "1.0.219"
+thiserror = "2.0.12"
+
+[dev-dependencies]
+assert_cmd = "=2.0.17"
+predicates = "=3.1.3"

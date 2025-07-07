@@ -1,0 +1,5 @@
+- id: clipped
+  name: clipped
+  entry: clipped
+  language: system
+  require_serial: true

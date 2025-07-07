@@ -1,0 +1,1 @@
+clippy_args = ["--fix", "--allow-dirty"]
