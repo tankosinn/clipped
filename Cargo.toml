@@ -1,6 +1,6 @@
 [package]
 name = "clipped"
-version = "0.0.0"
+version = "0.1.0"
 authors = ["Tankosin <tankosinn@gmail.com>"]
 description = "Clipped your cargo clippy"
 license = "MIT"

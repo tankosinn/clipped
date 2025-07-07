@@ -86,7 +86,7 @@ or use the `clipped` repository:
 ```yaml
 repos:
   - repo: https://github.com/tankosinn/clipped
-    rev: v0.0.0
+    rev: 0.1.0
     hooks:
       - id: clipped
 ```
